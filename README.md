@@ -1,4 +1,8 @@
 # myvimrc
+
+when first apply this repo in a new device , use "ln -s ~/.vim/vimrc ~/.vimrc" to make vimrc in use
+
+
 # origin version change before github repo build
 # " >> version: 
 # "		  v1.0

@@ -2,23 +2,6 @@
 " >> Author: Lazyla
 " >> E-mail: bugtags@gmail.com
 " >> LastModified:2015-08-11 18:05:26
-" >> version: 
-"		  v1.0
-"			first formal edition
-"		  v1.1
-"			fix AutoPair in head of line
-"		  v1.2
-"			fix w key slow and F2 confict
-"		  v1.3
-"			fix part of ctags && taglist
-"		  v1.4
-"			add system judge
-"		  v1.5
-"			add taglist && Winmangager plugin
-"		  v1.6
-"			add expand_region_expand plugin
-"		  v1.7
-"			add modified time
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 说明，帮助记忆  

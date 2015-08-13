@@ -9,7 +9,7 @@ esac
 alias grep='grep -E --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias ll='ls -alt'
+alias ll='ls -alFt'
 alias la='ls -A'
 alias l='ls -CF'
 alias tree='tree -C'
@@ -23,6 +23,14 @@ alias ..="cd .."
 alias ~="cd ~"
 alias gg="exit"
 alias zhuomian="cd 桌面"
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+fi
 
 #历史记录文件
 HISTFILE=~/.zsh_history 
@@ -71,3 +79,4 @@ export PATH=/sbin:$PATH
 
 export PATH=/opt/bin:$PATH
 export ndk=/home/larry_chen/src/ndk
+

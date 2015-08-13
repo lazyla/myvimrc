@@ -183,6 +183,20 @@ set ignorecase smartcase
 "搜索是否要绕回文件开头
 "set nowrapscan	
 
+"vundle
+filetype off
+if has("unix")
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+else 
+    set rtp+=~/vimfiles/bundle/vundle/
+    call vundle#rc('$HOME/vimfiles/bundle/')
+endif
+"if you want to install vim-markdown
+"(https://github.com/plasticboy/vim-markdown), just add "Bundle
+"'plasticboy/vim-markdown'"
+"then run [vim +BundleInstall]
+
 "文件侦测
 filetype on
 filetype indent on
@@ -354,7 +368,7 @@ endif
 "::inoremap > <c-r>=AutoSpace('>')<CR>
 :inoremap << <><ESC>i
 
-:inoremap : <c-r>=AutoSpace(':')<CR>
+":inoremap : <c-r>=AutoSpace(':')<CR>
 
 :inoremap " <c-r>=AutoPare('"','"')<CR>
 :inoremap ' ''<ESC>i

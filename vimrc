@@ -35,6 +35,8 @@ endfunction
 
 "let mapleader="\<space>"
 
+inoremap jj <ESC>
+
 "自动插入最后修改日期和时间
 autocmd BufWritePre,FileWritePre [._]vimrc ks|call LastModified()|'s
 
@@ -108,10 +110,17 @@ set showcmd
 "color asmanian2     
 
 " 设置字体
-if has("gui_running")
-	set guifont=Courier\ 10\ Pitch\ 16
-	"set guifont=Courier\ New\ 15    
-	"set guifont=Droid\ Sans\ Mono\ 15
+if GetSystem() == "windows"
+	if has("gui_running")
+		"set guifont=Courier_New:h16
+		set guifont=Courier_10_Pitch:h16
+	endif
+else
+	if has("gui_running")
+		set guifont=Courier\ 10\ Pitch\ 16
+		"set guifont=Courier\ New\ 15    
+		"set guifont=Droid\ Sans\ Mono\ 15
+	endif
 endif
 
 "设置主题
@@ -361,12 +370,13 @@ endif
 :inoremap [ <c-r>=AutoPare('[',']')<CR>
 :inoremap ] <c-r>=ClosePair(']')<CR>
 
-:inoremap = <c-r>=AutoSpace('=')<CR>
+":inoremap = <c-r>=AutoSpace('=')<CR>
 :inoremap == <c-r>=AutoSpace('==')<CR>
 :inoremap , , 
 "::inoremap < <c-r>=AutoSpace('<')<CR>
 "::inoremap > <c-r>=AutoSpace('>')<CR>
-:inoremap << <><ESC>i
+":inoremap << <><ESC>i
+
 
 ":inoremap : <c-r>=AutoSpace(':')<CR>
 

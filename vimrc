@@ -454,9 +454,9 @@ map <F12> gg=G
 
 "选中状态下 Ctrl+c 复制
 vmap <C-c> "+y
-vmap <C-x> "yd								"Ctrl+x
-nmap <C-v> "yp								"Ctrl+v
-vmap <C-v> "yp
+vmap <C-x> "+d								"Ctrl+x
+nmap <C-v> "+p								"Ctrl+v
+vmap <C-v> "+p
 imap <C-s> <Esc>:wa<cr>i<Right>				"Ctrl+s
 nmap <C-s> :wa<cr>
 

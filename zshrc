@@ -80,3 +80,4 @@ export PATH=/sbin:$PATH
 export PATH=/opt/bin:$PATH
 export ndk=/home/larry_chen/src/ndk
 
+export PATH=/home/larry_chen/android/android-studio/bin/:$PATH

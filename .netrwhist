@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/larry_chen/.ssh'
+let g:netrw_dirhist_2='/home/larry_chen'
+let g:netrw_dirhist_3='/home/larry_chen/.ssh/build/.git'
+let g:netrw_dirhist_4='/home/larry_chen/.ssh/device/intel/baytrail/K013/config'
+let g:netrw_dirhist_5='/home/larry_chen/src/cpp'
+let g:netrw_dirhist_6='/home/larry_chen/src/ze550rel/kernel/drivers/media/platform/msm/camera_v2/isp'

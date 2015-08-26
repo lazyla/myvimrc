@@ -6,6 +6,8 @@ case $TERM in
     screen*) TERM=screen-256color ;; 
 esac 
 
+alias -s tar='tar -xzvf'
+
 alias grep='grep -E --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -18,8 +20,8 @@ alias cp="cp -i"
 alias mv="mv -i" 
 alias rm="rm -i"
 alias gvim="gvim -f"
+alias gv='gvim -f'
 alias ...="cd ../.."
-alias ..="cd .."
 alias ~="cd ~"
 alias gg="exit"
 alias zhuomian="cd 桌面"

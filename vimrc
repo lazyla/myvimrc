@@ -577,9 +577,9 @@ endfunc
 "按下F5重新生成tag文件，并更新taglist
 map <F5> :!ctags -R --c++kinds=+p --fields=+iaS --extra=+q . <CR><CR> : TlistUpdate<CR>
 imap <F5> <ESC> :!ctags -R --c++-kikds=+p --fields=+ias --extra=+q . <CR><CR> : TlistUpdate<CR>
-set tags=tags
+"set tags=tags
 set tags+=./tags			"add current directory's generated tags file
-set tags+=~/src/ze550rel/tags
+"set tags+=~/src/ze550rel/tags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "ap <F9> :call SaveInputData()<CR>

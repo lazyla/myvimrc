@@ -248,10 +248,10 @@ endif
 " quickfix模式
 autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
 
-if has("autocmd") 
-	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-	autocmd FileType python set omnifunc = pythoncomplete#Complete
-endif
+" if has("autocmd") 
+" 	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+" 	autocmd FileType python set omnifunc = pythoncomplete#Complete
+" endif
 
 "setlocal completefunc=javacomplete#CompleteParamsInfo
 
@@ -359,9 +359,14 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "自动补全
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:inoremap ( <c-r>=AutoPare('(',')')<CR>
-:inoremap ) <c-r>=ClosePair(')')<CR>
-":inoremap (( ();<ESC><Left>i
+"if (&filetype == 'cpp' || &filetype == 'c' || &filetype == 'java')
+"    :inoremap ( <c-r>=AutoPare('(',')')<CR>
+"    :inoremap ) <c-r>=ClosePair(')')<CR>
+"else
+"    :inoremap (( ();<ESC><Left>i
+"endif
+:inoremap ( ()<ESC>i
+:inoremap (( ();<ESC><Left>i
 
 :inoremap { {<CR>}<ESC>O
 :inoremap } <c-r>=ClosePair('}')<CR>
@@ -535,9 +540,10 @@ func! SetTitle()
 		call append(line(".")+1, "\# Author: Lazyla") 
 		call append(line(".")+2, "\# mail: bugtags@gmail.com") 
 		call append(line(".")+3, "\# Created Time: ".strftime("%c")) 
-		call append(line(".")+4, "\#########################################################################") 
-		call append(line(".")+5, "\#!/bin/bash") 
-		call append(line(".")+6, "") 
+		call append(line(".")+4, "\# Description && History: ")
+		call append(line(".")+5, "\#########################################################################") 
+		call append(line(".")+6, "\#!/bin/zsh") 
+		call append(line(".")+7, "") 
 	else 
 		call setline(1, "\/*************************************************************************") 
 		call append(line("."), "	> File Name: ".expand("%")) 
@@ -559,6 +565,10 @@ func! SetTitle()
 	endif
 	if &filetype == 'java'
 		call append(line(".")+6,"public class ".expand("%"))
+		call append(line(".")+7,"")
+	endif
+	if &filetype == 'py'
+		call append(line(".")+6, "Description && History: ")
 		call append(line(".")+7,"")
 	endif
 	"新建文件后，自动定位到文件末尾
